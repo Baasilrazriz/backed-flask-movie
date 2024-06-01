@@ -95,7 +95,7 @@ class MovieRecommendationSystem:
             movie_metadata = self.imdb_dataset.iloc[index].to_dict()
             poster_url = self.get_poster_url_from_title(movie_metadata['movie_title'])
             movie_metadata['poster_url'] = poster_url
-            recommendations[i-1] = movie_metadata  # i-1 because we skipped the first index
+            recommendations[i] = movie_metadata  # i because we skipped the first index
 
         return recommendations
     def recommend_movies(self):
